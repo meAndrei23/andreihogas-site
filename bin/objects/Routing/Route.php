@@ -15,7 +15,6 @@ class Route {
     //$pat[0] = '/\{(?:([a-z]+):)?((?:[a-z]|[A-Z]|[0-9]|\[|\]|\*|\-|\\|\(|\)|\.|\||\?|\+|\+|\+)*)\}/';
     $pat[0] = '/\{(?:([a-z]+):)?([^\{\}]*)\}/';
     $rep[0]= '(?<$1>($2))';
-
     $pattern = preg_replace($pat, $rep, $pattern);
 
     $this -> pattern = $pattern;

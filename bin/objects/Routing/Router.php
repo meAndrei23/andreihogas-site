@@ -14,8 +14,8 @@ class Router {
   public function run($url) {
     $data = $this -> routerSet -> match($url);
     if(isset($data['_controller'], $data['_action'])) {
-      $controller = $data['_controller'];
-      $action = $data['_action'];
+      $controller = $data['_controller'].'Controller';
+      $action = $data['_action'].'Action';
       $ctr = new $controller;
       $ctr -> $action($data['matches']);
       return true;

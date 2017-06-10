@@ -1,5 +1,7 @@
 <?php
-if(file_exists(substr($_SERVER['SCRIPT_NAME'],1)))
+if(file_exists(substr($_SERVER['SCRIPT_NAME'],1))){
   return false;
-else
+}
+else {
   include 'index.php';
+}

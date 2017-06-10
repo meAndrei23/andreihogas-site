@@ -1,12 +1,9 @@
 <?php
 use Routing\Router;
 
-error_reporting(-1);
-ini_set('display_errors', 'On');
-
 require('../../bin/init.php');
 
-$request = (isset($_SERVER['PATH_INFO'])) ? $_SERVER['PATH_INFO'] : '/';
+$request = (isset($_SERVER['REQUEST_URI'])) ? explode('?', $_SERVER['REQUEST_URI'])[0] : '/';
 
 $router = new Router();
 

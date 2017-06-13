@@ -1,9 +1,9 @@
 <?php
 $routeList = [
   [
-    'name' => '', 'pattern' => '',
+    'name' => 'home', 'pattern' => '/',
     'options' => [
-      '_controller' => '', '_action' => ''
+      '_controller' => 'FrontOffice', '_action' => 'home'
     ]
   ]
 ];
